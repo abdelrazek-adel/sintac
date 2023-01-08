@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #eee;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 5px #aaa;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 40px;
+}
+header nav .list {
+  display: none;
+  color: #222;
+  font-size: 25px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 500px) {
+  header nav .list {
+    display: inline-block;
+  }
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+header nav ul li a {
+  color: #222;
+}
+header nav ul li a i {
+  font-size: 25px !important;
+  font-weight: 700 !important;
+}
+header nav ul li a img {
+  height: 35px;
+}
+@media (max-width: 500px) {
+  header nav ul {
+    display: none;
+  }
+}
+header article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: system-ui;
+  color: #05058a;
+}
+
+.top-baner {
+  width: 100%;
+  height: calc(100vh - 60px);
+  padding: 0 80px;
+  margin-top: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+@media (min-width: 500px) and (max-width: 900px) {
+  .top-baner {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .top-baner {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+.top-baner img {
+  height: 90%;
+}
+@media (max-width: 500px) {
+  .top-baner img {
+    width: 90%;
+    height: auto;
+  }
+}
+.top-baner .fire {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 63vh;
+  left: 27%;
+  transform: rotate(45deg);
+  animation: slidein 10s 2s infinite;
+}
+@media (max-width: 500px) {
+  .top-baner .fire {
+    animation: none;
+    display: none;
+  }
+}
+.top-baner article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: #eee;
+}
+@media (min-width: 500px) and (max-width: 900px) {
+  .top-baner article {
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .top-baner article {
+    align-items: center;
+  }
+}
+.top-baner article span {
+  color: #aaa;
+}
+.top-baner article h2 {
+  font-size: 42px;
+}
+@media (max-width: 500px) {
+  .top-baner article h2 {
+    font-size: 30px;
+  }
+}
+.top-baner article i {
+  color: #d45601;
+}
+@media (max-width: 500px) {
+  .top-baner article h3 {
+    font-size: 15px;
+  }
+}
+.top-baner article h3 span {
+  color: #eee;
+  font-size: 32px;
+}
+@media (max-width: 500px) {
+  .top-baner article h3 span {
+    font-size: 17px;
+  }
+}
+.top-baner article .bonas {
+  font-size: 25px;
+}
+.top-baner article article {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 30px;
+}
+.top-baner article article span {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.top-baner article a {
+  display: inline-block;
+  padding: 10px 79px;
+  background: #05058a;
+  color: #eee;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(0%) rotate(45deg);
+  }
+  20% {
+    transform: translateX(800%) rotate(30deg);
+  }
+  50% {
+    transform: translateX(800%) rotate(-50deg) translateY(-700%);
+  }
+  60% {
+    transform: translateX(800%) rotate(-50deg) translateY(-600%);
+  }
+  70% {
+    transform: translateX(600%) rotate(-90deg) translateY(-600%);
+  }
+  80% {
+    transform: translateX(0%) rotate(-135deg) translateY(0%);
+  }
+}
+
+/*# sourceMappingURL=min.css.map */

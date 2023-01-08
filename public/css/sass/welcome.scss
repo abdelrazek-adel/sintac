@@ -1,0 +1,115 @@
+.top-baner {
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding: 0 80px;
+    margin-top: 60px;
+    position: relative;
+    @include flex (center , space-between);
+    @include breakpoints (smull) {
+        flex-direction: column;
+    }
+    @include breakpoints (mobile) {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    img {
+        height: 90%;
+        @include breakpoints (mobile) {
+            width: 90%;
+            height: auto;
+        }
+    }
+    .fire {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 63vh;
+        left: 27%;
+        transform: rotate(45deg); 
+        animation: slidein 10s 2s infinite ;
+        @include breakpoints (mobile) {
+            animation: none ;
+            display: none;
+        }             
+    }
+    article {
+        @include flex ( flex-start ,center , 15px , column);
+        @include breakpoints (smull) {
+            align-items: center;
+        }
+        @include breakpoints (mobile) {
+            align-items: center;
+        }
+        color: $back-tow;
+        span {
+            color: $borders;
+        }
+        h2 {
+            font-size: 42px;
+            @include breakpoints (mobile) {
+                font-size: 30px;
+            }
+        }
+        i {
+            color: $front-tow;
+        }
+        h3 {
+            @include breakpoints (mobile) {
+                font-size: 15px;
+            }
+            span {
+                color: $back-tow;
+                font-size: 32px;
+                @include breakpoints (mobile) {
+                    font-size: 17px;
+                }
+            }
+        }
+        .bonas {
+            font-size: 25px;
+        }
+        article {
+            @include flex (center , flex-start , 5px);
+            font-size: 30px;
+            span {
+                font-size: 30px;
+                width: 50px;
+                height: 50px;
+                border: 1px solid $back-tow;
+                border-radius: 5px;
+                @include flex (center , center);
+            }
+        }
+        a {
+            display: inline-block;
+            padding: 10px 79px;
+            background: $front-one;
+            color: $back-tow;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+    }
+}
+@keyframes slidein {
+    0% {
+      transform: translateX(0%)rotate(45deg);
+    }
+  
+    20% {
+      transform: translateX(800%) rotate(30deg);
+    }
+    50% {
+        transform: translateX(800%) rotate(-50deg) translateY(-700%);
+      }
+      60% {
+        transform: translateX(800%) rotate(-50deg) translateY(-600%);
+      }
+      70% {
+        transform: translateX(600%) rotate(-90deg) translateY(-600%);
+      }
+      80% {
+        transform: translateX(0%) rotate(-135deg) translateY(0%);
+      }
+
+  }

@@ -1,0 +1,47 @@
+header {
+    background: $back-tow;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px $borders;
+    display: flex;
+    @include flex (center , space-between);
+    padding: 0 40px;
+    nav {
+        .list {
+            display: none;
+            color: $back-one;
+            font-size: 25px !important;
+            font-weight: 700 !important;
+            @include breakpoints (mobile) {
+                display: inline-block;
+            }
+        }
+        ul {
+            @include flex (center , center , 15px);
+            li {
+                a {
+                    color: $back-one;
+                    i {
+                        font-size: 25px !important;
+                        font-weight: 700 !important;
+                    }
+                    img {
+                        height: 35px;
+                    }
+                }
+            }
+            @include breakpoints (mobile) {
+                display: none;
+            }
+        }
+    }
+    article {
+        @include flex (center , center , 10px);
+        font-family: system-ui;
+        color: $front-one;
+
+    }
+}
