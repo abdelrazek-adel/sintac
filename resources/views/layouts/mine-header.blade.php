@@ -24,7 +24,7 @@
             </li>
             <li>
                 <a href="/en" title="اللغة">
-                    <img src="images/lang/egypt.png" width="auto" height="30" alt="">
+                    <img src="{{ asset("images/lang/egypt.png") }}" width="auto" height="30" alt="">
                 </a>
                 {{--  <a href="#">
                     {{ Config::get('languages')[App::getLocale()] }}

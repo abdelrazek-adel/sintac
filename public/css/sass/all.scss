@@ -17,8 +17,13 @@ $borders   : #aaa;
         @media (max-width: 500px) {
             @content
         }
+    } @else if $point ==bigmobile {
+        @media  (max-width: 700px) {
+            @content
+        }
+
     } @else if $point ==smull {
-        @media (min-width: 500px) and (max-width: 900px) {
+        @media (min-width: 700px) and (max-width: 900px) {
             @content
         }
     } @else if $point ==medium {
