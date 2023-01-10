@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="{{ asset("fontawesome/css/all.min.css") }}" />
     <link rel="stylesheet" href="{{ asset("css/min.css") }}">
     @yield('css')
-    <title>@yield('title')</title>
+    <title>sintac code - @yield('title')</title>
 </head>
 <body>
     <section>
-        @include('layouts.mine-header')
+        @yield('header')
         @yield('content')
     </section>
     @yield('js')

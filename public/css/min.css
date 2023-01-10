@@ -78,6 +78,11 @@ header article {
   font-family: system-ui;
   color: #05058a;
 }
+header .lang {
+  border-radius: 50%;
+  width: 20px;
+  height: 30px;
+}
 
 .top-baner {
   width: 100%;

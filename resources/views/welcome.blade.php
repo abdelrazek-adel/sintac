@@ -2,7 +2,10 @@
 @section('css')
 @stop
 @section('title')
-sintac code - إنطلق نحو النجاح
+إنطلق نحو النجاح
+@stop
+@section('header')
+@include('layouts.mine-header')
 @stop
 @section('content')
     <section class="top-baner">

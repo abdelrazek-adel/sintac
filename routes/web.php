@@ -4,6 +4,8 @@ use App\Http\Controllers\Auth\LoginController;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\PayPalController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +32,9 @@ Route::get('login/facebook', [App\Http\Controllers\Auth\LoginController::class, 
 Route::get('login/facebook/callback',[App\Http\Controllers\Auth\LoginController::class, 'handleFacebookCallback']);
 
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('create-transaction', [PayPalController::class, 'createTransaction'])->name('createTransaction');
+Route::get('process-transaction', [PayPalController::class, 'processTransaction'])->name('processTransaction');
+Route::get('success-transaction', [PayPalController::class, 'successTransaction'])->name('successTransaction');
+Route::get('cancel-transaction', [PayPalController::class, 'cancelTransaction'])->name('cancelTransaction');

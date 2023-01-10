@@ -3,9 +3,20 @@
         <i class="fa-solid fa-list list"></i>
         <ul>
             <li>
-                <a href="" title="الملف الشخصي">
-                    <i class="fa-solid fa-user"></i>
-                </a>
+                @guest
+                @if (Route::has('login'))
+                    <a href="{{ route('login') }}" title="دخول">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                @endif
+                @else
+                    <a class="a"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" dir="ltr" title="تسجيل الخروج">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                @endguest
             </li>
             <li>
                 <a href="" title="المساعدة">
@@ -24,7 +35,7 @@
             </li>
             <li>
                 <a href="/en" title="اللغة">
-                    <img src="{{ asset("images/lang/egypt.png") }}" width="auto" height="30" alt="">
+                    <img class="lang" src="{{ asset("images/lang/egypt.png") }}" width="30" height="30" alt="">
                 </a>
                 {{--  <a href="#">
                     {{ Config::get('languages')[App::getLocale()] }}
