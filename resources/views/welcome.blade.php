@@ -28,11 +28,11 @@ sintac code - إنطلق نحو النجاح
             <h3 class="bonas">
                 +3 أشهر مجانية
             </h3>
-            <article>
-                <span>60</span>:
-                <span>45</span>:
-                <span>10</span>:
-                <span>9</span>
+            <article dir="ltr">
+                <span id="d"></span>:
+                <span id="h"></span>:
+                <span id="m"></span>:
+                <span id="s"></span>
             </article>
             <a href="">اطلب العرض الآن</a>
             <h3>ضمان استعادة الأموال لمدة 10 أيام</h3>
@@ -126,6 +126,22 @@ sintac code - إنطلق نحو النجاح
             </a>
         </article>
     </section>
+    <section class="bottom">
+    </section>
+    <section class="under-bottom">
+        <article class="left">
+            <img src="{{ asset("images/assets/Team.png") }}" alt="">
+        </article>
+        <article class="right" dir="rtl">
+            <h2>تحكم في مؤشر نجاحك</h2>
+            <p>نسعى دائما جاهدين في تقديم أفضل الخدمات التي تمكنكم من
+                النجاح والتقدم وتطوير مشروعاتكم راجين من الله التوفيق لنا
+                ولكم .
+            </p>
+            <a href="#">اعرف عنا</a>
+        </article>
+    </section>
 @stop
 @section('js')
+    <script src="{{ asset("js/timer.js") }}"></script>
 @stop
