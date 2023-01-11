@@ -86,6 +86,8 @@ header .lang {
 
 .top-baner {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: calc(100vh - 60px);
   padding: 0 80px;
@@ -137,11 +139,13 @@ header .lang {
   top: 63vh;
   left: 27%;
   transform: rotate(45deg);
-  animation: slidein 10s 2s infinite;
+  -webkit-animation: slidein 10s 2s infinite;
+          animation: slidein 10s 2s infinite;
 }
 @media (max-width: 500px) {
   .top-baner .fire {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
     display: none;
   }
 }
@@ -230,6 +234,27 @@ header .lang {
   transform: scale(1.1);
 }
 
+@-webkit-keyframes slidein {
+  0% {
+    transform: translateX(0%) rotate(45deg);
+  }
+  20% {
+    transform: translateX(800%) rotate(30deg);
+  }
+  50% {
+    transform: translateX(800%) rotate(-50deg) translateY(-700%);
+  }
+  60% {
+    transform: translateX(800%) rotate(-50deg) translateY(-600%);
+  }
+  70% {
+    transform: translateX(600%) rotate(-90deg) translateY(-600%);
+  }
+  80% {
+    transform: translateX(0%) rotate(-135deg) translateY(0%);
+  }
+}
+
 @keyframes slidein {
   0% {
     transform: translateX(0%) rotate(45deg);
@@ -264,6 +289,8 @@ header .lang {
 
 .cards {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 20px;
   display: flex;
@@ -287,6 +314,8 @@ header .lang {
 }
 .cards .card {
   width: calc(33.3333333333% - 20px);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding-bottom: 20px;
   box-shadow: 0 0 5px #aaa;
@@ -413,6 +442,8 @@ header .lang {
 @media (max-width: 500px) {
   .under-bottom {
     flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     justify-content: center;
     padding-bottom: 20px;
@@ -465,4 +496,65 @@ header .lang {
   transform: scale(1.1);
 }
 
-/*# sourceMappingURL=min.css.map */
+.regiser-header {
+  height: 60px;
+  text-align: left;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.regiser-header h3 {
+  color: #05058a;
+}
+
+.registerform {
+  width: 500px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.registerform h2 {
+  color: #05058a;
+}
+.registerform .enter-data {
+  color: #DBE3FF;
+  height: 40px;
+  border: 1px solid #DBE3FF;
+  border-radius: 10px;
+  background-color: white;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.registerform .enter-data i {
+  color: #05058a;
+  margin-right: 5px;
+}
+.registerform input[type=text], .registerform input[type=password], .registerform input[type=email] {
+  border: none;
+}
+.registerform input[type=text]:focus, .registerform input[type=password]:focus, .registerform input[type=email]:focus {
+  outline: none;
+}
+.registerform li {
+  list-style: none;
+}
+.registerform button {
+  background-color: #05058a;
+  border: none;
+  width: 300px;
+  padding: 10px 2px;
+  border-radius: 10px;
+}/*# sourceMappingURL=min.css.map */

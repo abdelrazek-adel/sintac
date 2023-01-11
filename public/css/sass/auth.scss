@@ -1,0 +1,72 @@
+$width-inter-register : 300px ;
+$border-input-register:10px;
+ 
+ .regiser-header
+{
+     height: 60px;
+     text-align: left;
+     margin: 10px;
+     @include flex ( center ,left , 15px , row);
+     h3
+     {
+         color:$front-one
+     }
+}
+.registerform
+{
+    width: 500px;
+    margin: 50px auto;
+    @include flex ( center ,center , 15px , column);
+    h2
+    {
+        color:$front-one
+    }
+    .enter-data
+    {
+        color: #DBE3FF;
+        height: 40px;
+        border: 1px solid #DBE3FF;
+        border-radius: $border-input-register;
+        background-color: #ffff;
+        width:$width-inter-register;
+        @include flex ( center ,flex-end , 1px );
+        i
+        {
+            color: $front-one ;
+            margin-right: 5px;
+        }
+    }
+    // .sigin-social
+    // {
+    //     .face-image
+    //     {
+    //         mix-blend-mode:color;
+    //     }
+    //     .gogal-image
+    //     {
+    //         mix-blend-mode:color; 
+    //     }
+    // }
+    input[type=text],input[type=password],input[type=email]
+    {
+        border: none;
+    
+        &:focus
+        {
+            outline:none;
+        }
+    }
+   
+    li {
+        list-style:none;
+    }
+    button
+    {
+        background-color: $front-one;
+        border: none;
+        width: $width-inter-register;
+        padding: 10px 2px;
+        border-radius:$border-input-register;
+    }
+   
+}
